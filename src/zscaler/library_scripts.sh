@@ -1,8 +1,17 @@
 #!/bin/bash -i
 
 check_ca_certicate() {
-    apt update
-    apt -y install wget ca-certificates
+    tempdir=$(mktemp -d)
+
+    # copy current state of apt list - in order to revert back later (minimize contianer layer size)
+    cp -p -R /var/lib/apt/lists $tempdir
+    apt-get update -y
+    apt-get -y install --no-install-recommends wget ca-certificates
+
+    echo "revert back apt lists"
+    rm -rf /var/lib/apt/lists/*
+    rm -r /var/lib/apt/lists
+    mv $tempdir/lists /var/lib/apt/lists
 }
 
 copy_certificate() {
