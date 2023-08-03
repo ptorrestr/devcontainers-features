@@ -16,8 +16,7 @@ echo "Activating feature Zscaler"
 # remoteUser or containerUser is useful.
 # For more details, see https://containers.dev/implementors/features#user-env-var
 
-
-
+check_ca_certicate
 copy_certificate $CERTIFICATE_FOLDER $CERTIFICATE_FILE
 
 echo "Done!"

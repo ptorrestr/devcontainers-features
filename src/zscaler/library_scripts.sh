@@ -1,5 +1,10 @@
 #!/bin/bash -i
 
+check_ca_certicate() {
+    apt update
+    apt -y install wget ca-certificates
+}
+
 copy_certificate() {
     local certificate_folder=$1
     local certificate_file=$2
