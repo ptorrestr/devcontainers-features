@@ -4,12 +4,12 @@
     "version": "0.0.1",
     "description": "Add support for Zscaler configuration",
     "options": {
-        "certificateLocation": {
+        "certificateFolder": {
             "type": "string",
             "enum": [
-                "/usr/local/share/ca-certificates/custom-ca/ZscalerRootCertificate-2048-SHA256.crt"
+                "/usr/local/share/ca-certificates/custom-ca"
             ],
-            "default": "/usr/local/share/ca-certificates/custom-ca/ZscalerRootCertificate-2048-SHA256.crt",
+            "default": "/usr/local/share/ca-certificates/custom-ca",
             "description": "Set the location where to save the certificate file."
         },
         "pythonBinPaths": {

@@ -1,5 +1,6 @@
 #!/bin/sh
-CERTIFCATE_LOCATION="${CERTIFCATELOCATION:-"/usr/local/share/ca-certificates/custom-ca/ZscalerRootCertificate-2048-SHA256.crt"}"
+CERTIFICATE_FOLDER="${CERTIFICATEFOLDER:-"/usr/local/share/ca-certificates/custom-ca"}"
+CERTIFICATE_FILE="ZscalerRootCertificate-2048-SHA256.crt"
 PYTHON_BIN_PATHS="${PYTHONBINPATHS}"
 
 set -e
@@ -16,7 +17,8 @@ echo "Activating feature Zscaler"
 
 
 copy_certificate() {
-    cat > ${CERTIFCATE_LOCATION} \
+    mkdir -p $CERTIFCATE_LOCATION
+    cat > ${CERTIFCATE_LOCATION/$CERTIFICATE_FILE} \
 << EOF
 -----BEGIN CERTIFICATE-----
 MIIE0zCCA7ugAwIBAgIJANu+mC2Jt3uTMA0GCSqGSIb3DQEBCwUAMIGhMQswCQYD
