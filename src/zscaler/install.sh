@@ -17,8 +17,8 @@ echo "Activating feature Zscaler"
 
 
 copy_certificate() {
-    mkdir -p $CERTIFCATE_LOCATION
-    cat > ${CERTIFCATE_LOCATION/$CERTIFICATE_FILE} \
+    mkdir -p $CERTIFICATE_FOLDER
+    cat > ${CERTIFICATE_FOLDER/$CERTIFICATE_FILE} \
 << EOF
 -----BEGIN CERTIFICATE-----
 MIIE0zCCA7ugAwIBAgIJANu+mC2Jt3uTMA0GCSqGSIb3DQEBCwUAMIGhMQswCQYD
