@@ -1,6 +1,6 @@
 {
     "name": "Zscaler",
-    "id": "color",
+    "id": "zscaler",
     "version": "0.0.1",
     "description": "Add support for Zscaler configuration",
     "options": {
