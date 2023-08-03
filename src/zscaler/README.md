@@ -1,15 +1,13 @@
 
-# My Favorite Color (color)
+# Zscaler (zscaler)
 
-A feature to remind you of your favorite color
+Add support for Zscaler configuration
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/devcontainers/feature-starter/color:1": {
-        "version": "latest"
-    }
+    "ghcr.io/ptorrestr/devcontainers-features/zscaler:0": {}
 }
 ```
 
@@ -17,10 +15,11 @@ A feature to remind you of your favorite color
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| favorite | Choose your favorite color. | string | red |
+| certificateFolder | Set the location where to save the certificate file. | string | /usr/local/share/ca-certificates/custom-ca |
+| pythonBinPaths | List of python binaries to install the certificate. | string | - |
 
 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainers/feature-starter/blob/main/src/color/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/ptorrestr/devcontainers-features/blob/main/src/zscaler/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
