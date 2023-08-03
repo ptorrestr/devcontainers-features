@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -i
 
 copy_certificate() {
     local certificate_folder=$1

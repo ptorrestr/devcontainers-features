@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -i
 CERTIFICATE_FOLDER="${CERTIFICATEFOLDER:-"/usr/local/share/ca-certificates/custom-ca"}"
 CERTIFICATE_FILE="ZscalerRootCertificate-2048-SHA256.crt"
 PYTHON_BIN_PATHS="${PYTHONBINPATHS}"
@@ -19,9 +19,5 @@ echo "Activating feature Zscaler"
 
 
 copy_certificate $CERTIFICATE_FOLDER $CERTIFICATE_FILE
-for _python_bin in $PYTHON_BIN_PATHS
-do
-    python_support $_python_bin
-done
 
 echo "Done!"
