@@ -1,0 +1,19 @@
+{
+    "basic": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy ",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+            "zscaler": {}
+        }
+    },
+    "basic_python": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {},
+
+            "zscaler": {
+                "pythonBinPaths":"/usr/bin/python3"
+            }
+        }
+    }
+}
