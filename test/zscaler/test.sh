@@ -20,10 +20,10 @@
 #
 # These scripts are run as 'root' by default. Although that can be changed
 # with the '--remote-user' flag.
-# 
+#
 # This test can be run with the following command:
 #
-#    devcontainer features test    \ 
+#    devcontainer features test    \
 #               --features color   \
 #               --remote-user root \
 #               --skip-scenarios   \
@@ -40,7 +40,8 @@ source dev-container-features-test-lib
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
-check "validate favorite color" color | grep 'my favorite color is red'
+check "Zscaler file is present" bash -c "test -f /usr/local/share/ca-certificates/custom-ca/ZscalerRootCertificate-2048-SHA256.crt"
+check "Able to download file" bash -c "wget https://www.google.com"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

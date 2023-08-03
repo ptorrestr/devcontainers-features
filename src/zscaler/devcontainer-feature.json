@@ -1,0 +1,29 @@
+{
+    "name": "Zscaler",
+    "id": "zscaler",
+    "version": "0.0.1",
+    "description": "Add support for Zscaler configuration",
+    "options": {
+        "certificateFolder": {
+            "type": "string",
+            "enum": [
+                "/usr/local/share/ca-certificates/custom-ca"
+            ],
+            "default": "/usr/local/share/ca-certificates/custom-ca",
+            "description": "Set the location where to save the certificate file."
+        },
+        "pythonBinPaths": {
+            "type": "string",
+            "enum": [
+                "",
+                "/usr/bin/python3"
+            ],
+            "default": "",
+            "description": "List of python binaries to install the certificate."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers-contrib/features/apt-packages"
+    ]
+}
