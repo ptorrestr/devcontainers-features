@@ -18,7 +18,7 @@ echo "Activating feature Zscaler"
 
 
 
-copy_certificate
+copy_certificate $CERTIFICATE_FOLDER $CERTIFICATE_FILE
 for _python_bin in $PYTHON_BIN_PATHS
 do
     python_support $_python_bin
